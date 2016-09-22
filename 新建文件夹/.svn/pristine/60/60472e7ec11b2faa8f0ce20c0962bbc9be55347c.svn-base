@@ -1,0 +1,18 @@
+<?php
+
+return array (
+	'default' => array (
+		'hostname' => 'sqld.duapp.com:4050',
+		'database' => 'FIQLigTzaUukxnLENPMg',
+		'username' => '8ec21dfbdd0b4cf19c3b7678f50753e3',
+		'password' => 'a3e14d69a57544438761451b8484c384',
+		'tablepre' => 'v9_',
+		'charset' => 'utf8',
+		'type' => 'mysql',
+		'debug' => true,
+		'pconnect' => 0,
+		'autoconnect' => 0
+		),
+);
+
+?>

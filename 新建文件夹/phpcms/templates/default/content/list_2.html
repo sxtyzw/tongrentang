@@ -1,0 +1,110 @@
+{template "content","header"}
+<script src={JS_PATH}myjs/zhongchengyao.js></script>
+<link rel="stylesheet" href={CSS_PATH}mycss/pinpaichanpin_1.css>
+<div class="banner">
+    <a href=""><div class="banner1"><img src="{IMG_PATH}myimgs/banner03.jpg" alt=""></div></a>
+    {pc:content action="category" catid="0" num="6" order="listorder ASC" }
+    {loop $data $r}
+    <div class="banner2">
+        <a href="{$r[url]}"><div class="banner11">{$r[catname]}</div></a>
+        <div class="shang">
+            {pc:content action="category" catid="$r[catid]" num="6" order="listorder ASC" }
+            {loop $data $r}
+            <a href="{$r[url]}"><div>{$r[catname]}</div></a>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+</div>
+<div class="shen">
+    <div class="shen1">
+        <div class="shen11">{$CATEGORYS[$catid][catname]}</div>
+        <div class="shen12"></div>
+    </div>
+    <div class="shen2">
+        <div class="shen21"><img src="{IMG_PATH}myimgs/shen21.jpg" alt=""></div>
+        <div class="shen22"><img src="{IMG_PATH}myimgs/shen22.jpg" alt=""></div>
+        <div class="shen23"><img src="{IMG_PATH}myimgs/shen23.jpg" alt=""></div>
+        <div class="shen24"><img src="{IMG_PATH}myimgs/shen24.jpg" alt=""></div>
+        <div class="shen25"><img src="{IMG_PATH}myimgs/shen25.jpg" alt=""></div>
+        <div class="shen26"><img src="{IMG_PATH}myimgs/shen26.jpg" alt=""></div>
+        <div class="shen27"><img src="{IMG_PATH}myimgs/shen27.jpg" alt=""></div>
+        <div class="shen28"><img src="{IMG_PATH}myimgs/shen28.jpg" alt=""></div>
+    </div>
+    <div class="shen3">
+        <div class="shen31"><img src="{IMG_PATH}myimgs/shen31.jpg" alt=""></div>
+        <div class="shen32">
+            <div class="shen320">
+                <div class="shen321 shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen321.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>补益药</div>
+                </div>
+                <div class="shen322  shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen322.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>止咳平喘</div>
+                </div>
+                <div class="shen323  shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen323.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>胃肠道疾病用</div>
+                </div>
+                <div class="shen324  shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen324.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>妇科用药</div>
+                </div>
+                <div class="shen325 shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen325.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>清火药</div>
+                </div>
+                <div class="shen326 shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen326.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>感冒类药</div>
+                </div>
+                <div class="shen327 shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen327.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>祛暑药</div>
+                </div>
+                <div class="shen328 shen3210">
+                    <div class="shen3200">
+                        <div class="shen3211">
+                            <img src="{IMG_PATH}myimgs/shen328.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>心脑血管类药</div>
+                </div>
+            </div>
+        </div>
+        <div class="shen33"><img src="{IMG_PATH}myimgs/shen33.jpg" alt=""></div>
+    </div>
+
+</div>
+{template "content","footer"}

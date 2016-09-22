@@ -1,0 +1,73 @@
+{template "content","header"}
+<script src={JS_PATH}myjs/gongsigaikuang.js></script>
+<link rel="stylesheet" href={CSS_PATH}mycss/pinpaichanpin1.css>
+<div class="banner">
+    <a href=""><div class="banner1"><img src="{IMG_PATH}myimgs/banner03.jpg" alt=""></div></a>
+    {pc:content action="category" catid="0" num="6" order="listorder ASC" }
+    {loop $data $r}
+    <div class="banner2">
+        <a href="{$r[url]}"><div class="banner11">{$r[catname]}</div></a>
+        <div class="shang">
+            {pc:content action="category" catid="$r[catid]" num="6" order="listorder ASC" }
+            {loop $data $r}
+            <a href="{$r[url]}"><div>{$r[catname]}</div></a>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+</div>
+<div class="shen">
+    <div class="shen1">
+        <div class="shen11">{$CATEGORYS[$catid][catname]}</div>
+        <div class="shen12">
+            {pc:content action="category" catid="$catid" num="10" order="listorder ASC" }
+            {loop $data $r}
+            <div class="shen121"><a href="{$r[url]}"><div class="shen122">{$r[catname]}</div></a></div>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    <div class="shen2">
+        <div class="shen21">
+            <div class="shen211">{$CATEGORYS[$catid][catname]}</div>
+            <div class="shen212">
+                <div class="shen2121"><a href="">首页</a> &gt; {catpos($catid)}</div>
+            </div>
+        </div>
+        <div class="shen22">
+            <div class="shen221">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京同仁堂科技发展股份有限公司的产品涉及20多个剂型，200多个品种，包含药品、食品保健品等，并有丰富的已开发新产品和在开发新产品的储备。麦尔海化妆品由北京同仁堂麦尔海生物技术有限公司生产，它是北京同仁堂集团下属的三级公司，在同仁堂博大精深的企业文化指引下，经营业绩连年实现跳跃式增长，使同仁堂麦尔海公司已经成为已成为护肤品市场民族品牌的生力军。北京同仁堂南三环中路药店及同仁堂第二中医医院集名药、名医为一体，相互扶持，相互依托，共同提高，走出了一条适合自身发展的道路，为广大顾客提供满意的医疗服务。
+            </div>
+            <div class="shen222">
+                <img src="{IMG_PATH}myimgs/shen2221.jpg" alt="">
+                <img src="{IMG_PATH}myimgs/shen2222.jpg" alt="">
+                <img src="{IMG_PATH}myimgs/shen2223.jpg" alt="">
+            </div>
+        </div>
+        <div class="shen23">
+            <div class="shen231">{$CATEGORYS[28][catname]}</div>
+            <div class="shen232">
+                {pc:content action="lists"  catid="28" num="3" order="listorder ASC"   }
+                {loop $data $r}
+                {if $r[thumb]}<div class="shen2221"><img src="{thumb($r[thumb])}" alt="{$r[title]}" /></div>
+                {else}
+                {/if}
+                <div class="shen2222">
+                    <div class="shen22221">
+                        <a href="{$r[url]}"> <div class="shen222211">{$r[title]}</div></a>
+                        <div class="shen222212">{date('Y-m-d', $r['inputtime'])}</div>
+                    </div>
+                    <div>{str_cut($r[description],200)}</div>
+                    <a href="{$r[url]}"> <div class="shen22223">更多></div></a>
+                </div>
+                {/loop}
+                {/pc}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{template "content","footer"}

@@ -1,0 +1,340 @@
+body,ul,h2,h3,h1,p,li,a,dd{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #778072;
+}
+body{
+	background: url(../../images/myimgs/bg3.jpg);
+}
+.zuiwai{
+	width: 936px;
+	height:100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.head1{
+	height: 40px;
+	width: 936px;
+}	
+.head10{
+	height: 40px;
+	width: 280px;
+	float: right;
+	background: url(images/head1.png) no-repeat 0px 7px;
+	padding-left: 23px;
+}
+.head1 a,.head10 div{
+	float: left;
+	color: white;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 25px;
+}
+.head1 .head11{
+	margin-right: 0px;
+}
+.head1 .head12{
+	margin-left: -5px;
+	margin-right: 15px;
+	color: black;
+}
+.head2{
+	height: 100px;
+	width: 100%;
+	background: white;
+}
+.head21{
+	padding-top: 20px;
+	padding-left: 14px;
+	width: 200px;
+	float: left;
+}
+.head22{
+	height: 30px;
+	width: 430px;
+	margin-top: 35px;
+	float: right;
+}
+.head22 a{
+	margin-right: 15px;
+	font-size: 16px;
+	color: #333;
+}
+.head22 div{
+	float: right;
+	margin-right: 20px;
+	position: relative;
+}
+.head2 input{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	border: 1px solid #aaa;
+}
+.head22 div div{
+	position: absolute;
+	right: -15px;
+	top: 5px;
+}
+.banner{
+	width: 936px;
+	height: 300px;
+	position: relative;
+	background: white url(../../images/myimgs/bannerbg.jpg) no-repeat bottom;
+}
+.banner1{
+	width: 936px;
+	height: 282px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.banner11{
+	height: 37px;
+	width: 180px;
+	margin-right: 2px;	
+	font-size: 16px;
+	line-height: 35px;
+	text-align: center;
+	z-index: 1000;
+	color: black;
+}
+.banner12{
+	background: url(../../images/myimgs/banner12.png);
+	position: absolute;
+	left: 20px;
+	top: 14px;
+}
+.banner12:hover{
+	background: url(../../images/myimgs/banner120.png);
+}
+.banner13{
+	background: url(../../images/myimgs/banner13.png);
+	position: absolute;
+	left: 200px;
+	top: 14px;
+}
+.banner13:hover{
+	background: url(../../images/myimgs/banner130.png);
+}
+.banner14{
+	background: url(../../images/myimgs/banner13.png);
+	position: absolute;
+	left: 380px;
+	top: 14px;
+}
+.banner14:hover{
+	background: url(../../images/myimgs/banner140.png);
+}
+.banner15{
+	background: url(../../images/myimgs/banner13.png);
+	position: absolute;
+	left: 560px;
+	top: 14px;
+}
+.banner15:hover{
+	background: url(../../images/myimgs/banner150.png);
+}
+.banner16{
+	background: url(../../images/myimgs/banner16.png);
+	position: absolute;
+	left: 740px;
+	top: 14px;
+}
+.banner16:hover{
+	background: url(../../images/myimgs/banner160.png);
+}
+.banner .shang1 div,.banner .shang2 div,.banner .shang3 div,.banner .shang4 div,.banner .shang5 div{
+	background: white;
+	color: black;
+	font-size: 16px;
+	height: 33px;
+	width: 173px;
+	text-align: center;
+	line-height: 33px;
+	opacity: 0.8;
+	margin-bottom: 1px;
+}
+.banner .shang{
+	display: none;
+}
+.banner .shang1{
+	position: absolute;
+	left: 25px;
+	top: 51px;
+	opacity: 0;
+}
+.banner .shang1 div:hover{
+	background: url(../../images/myimgs/shang.png) repeat-x;
+	border-left: 15px solid #fb7f23;
+	width: 158px;
+	opacity:1;
+}
+.banner .shang2 div:hover{
+	background: url(../../images/myimgs/shang.png) repeat-x;
+	border-left: 15px solid #0c94af;
+	width: 163px;
+	opacity:1;
+}
+.banner .shang3 div:hover{
+	background: url(../../images/myimgs/shang.png) repeat-x;
+	border-left: 15px solid #eeb518;
+	width: 163px;
+	opacity:1;
+}
+.banner .shang4 div:hover{
+	background: url(../../images/myimgs/shang.png) repeat-x;
+	border-left: 15px solid #0078c0;
+	width: 163px;
+	opacity:1;
+}
+.banner .shang5 div:hover{
+	background: url(../../images/myimgs/shang.png) repeat-x;
+	border-left: 15px solid #a11918;
+	width: 158px;
+	opacity:1;
+}
+.banner .shang2{
+	position: absolute;
+	left: 200px;
+	opacity: 0;
+	top: 51px;
+}
+.banner .shang3{
+	position: absolute;
+	left: 380px;
+	opacity: 0;
+	top: 51px;
+}
+.banner .shang4{
+	position: absolute;
+	opacity: 0;
+	left: 560px;
+	top: 51px;
+}
+.banner .shang5{
+	position: absolute;
+	opacity: 0;
+	left: 740px;
+	top: 51px;
+}
+.banner .shang2 div,.banner .shang3 div,.banner .shang4 div{
+	width: 178px;
+}
+.shen{
+	height: 100%;
+	overflow: hidden;
+	background: white;
+}
+.shen .shen1{
+	width: 200px;
+	margin-left: 20px;
+	float: left;
+}
+.shen{
+	height: 100%;
+	background: white;
+}
+.shen .shen1{
+	padding-left: 20px;
+	height:30px;
+	width: 900px;
+	margin: 0 auto;
+}
+.shen .shen11{
+	float: left;
+	width: 60px;
+	height:25px;
+	border-bottom: 2px solid #C09305;
+	color:#F0B418 ;
+	font-size:18px;
+}
+.shen .shen12{
+	float: left;
+	height:26px;
+	width: 840px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.shen2{
+	position: relative;
+	height: 430px;
+	margin-top: 30px;
+}
+.shen2 div{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.shen3{
+	width: 606px;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+.shen32{
+	width: 540px;
+	height: 90px;
+	text-align: center;
+	color: #E8AB08;
+	overflow: hidden;
+}
+.shen .shen3210 {
+	height: 90px;
+	width: 90px;
+}
+.shen .shen3200{
+	width: 65px;
+	height: 65px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	border: 1px solid white;
+}
+.shen .shen32 .shen3211{
+	height: 60px;
+	width: 60px;
+	margin-left: 2px;
+	margin-top: 2px;
+	border-radius: 5px;
+	box-shadow: 1px 0 2px 0px;
+
+}
+.shen .shen320{
+	width: 800px;
+}
+.shen .shen320 div div{
+	float: none;
+}
+.shen3 div{
+	float: left;
+}
+.foot{
+	margin-top: 5px;
+}
+.foot1 div{
+	float: left;
+}
+.foot1{
+	line-height: 30px;
+	text-align: center;
+	height: 30px;
+	color: #fff;
+}
+.foot2{
+	margin-left: 120px;
+}
+.foot3{
+	margin-left:230px;
+}
+.foot4{
+	margin-top: 7px;
+	margin-right: 3px;
+}
+.foot5{
+	margin-top: 4px;
+}

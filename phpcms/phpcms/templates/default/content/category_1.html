@@ -1,0 +1,99 @@
+{template "content","header"}
+<script src={JS_PATH}myjs/gongsigaikuang.js></script>
+<link rel="stylesheet" href={CSS_PATH}mycss/xinwenzixun1.css>
+<div class="banner">
+    <a href=""><div class="banner1"><img src="{IMG_PATH}myimgs/banner02.jpg" alt=""></div></a>
+    {pc:content action="category" catid="0" num="6" order="listorder ASC" }
+    {loop $data $r}
+    <div class="banner2">
+        <a href="{$r[url]}"><div class="banner11">{$r[catname]}</div></a>
+        <div class="shang">
+            {pc:content action="category" catid="$r[catid]" num="6" order="listorder ASC" }
+            {loop $data $r}
+            <a href="{$r[url]}"><div>{$r[catname]}</div></a>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+</div>
+<div class="shen">
+    <div class="shen1">
+        <div class="shen11">{$CATEGORYS[$catid][catname]}</div>
+        <div class="shen12">
+            {pc:content action="category" catid="$catid" num="10" order="listorder ASC" }
+            {loop $data $r}
+            <div class="shen121"><a href="{$r[url]}"><div class="shen122">{$r[catname]}</div></a></div>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    <div class="shen2">
+        <div class="shen21">
+            <div class="shen211">{$CATEGORYS[$catid][catname]}</div>
+            <div class="shen212">
+                <div class="shen2121"><a href="">首页</a> &gt; {catpos($catid)}</div>
+            </div>
+        </div>
+        <div class="shen22">
+            <div class="shen221">热点新闻</div>
+            <div class="shen222">
+                {pc:content  action="position" posid="10" order="listorder DESC" num="1"}
+                {loop $data $r}
+                {if $r[thumb]}<div class="shen2221"><img src="{thumb($r[thumb])}" alt="{$r[title]}" /></div>
+                {else}
+                {/if}
+                <div class="shen2222">
+                    <div class="shen22221">
+                        <a href="{$r[url]}"> <div class="shen222211">{$r[title]}</div></a>
+                        <div class="shen222212">{date('Y-m-d', $r['inputtime'])}</div>
+                    </div>
+                    <div>{str_cut($r[description],300)}</div>
+                    <a href="{$r[url]}"> <div class="shen22223">阅读全文></div></a>
+                </div>
+                {/loop}
+                {/pc}
+             </div>
+            <!--<div class="shen222">-->
+                <!--{pc:content action="lists"  catid="$catid" num="1" order="listorder ASC"  page="$page" }-->
+                <!--{loop $data $r}-->
+                <!--<div class="shen2221">-->
+                    <!--<a href="{$r[url]}"> <div class="shen22211">{$r[title]}</div></a>-->
+                    <!--<div class="shen22212">{date('Y-m-d', $r['inputtime'])}</div>-->
+                <!--</div>-->
+                <!--<div class="shen2222">-->
+                    <!--{if $r[thumb]}<div class="shen22221"><img src="{thumb($r[thumb])}" alt="{$r[title]}" /></div>-->
+                    <!--{else}-->
+                    <!--{/if}-->
+
+                    <!--{$r[description]}-->
+                <!--</div>-->
+                <!--<a href="{$r[url]}"> <div class="shen2223">阅读全文></div></a>-->
+                <!--{/loop}-->
+                <!--{/pc}-->
+            <!--</div>-->
+
+        </div>
+        {pc:content action="category" catid="$catid" num="3" order="listorder ASC" }
+        {loop $data $r}
+        <div class="shen23">
+            <div class="shen231">{$r[catname]}</div>
+            <div class="shen232">
+                {pc:content action="lists"  catid="$r[catid]" num="3" order="listorder ASC"   }
+                {loop $data $r}
+                <div class="shen2321">
+                    <a href="{$r[url]}"><div class="shen23211">{$r[title]}</div></a>
+                    <div class="shen23212">{date('Y-m-d', $r['inputtime'])}</div>
+                </div>
+                {/loop}
+                {/pc}
+                <div class="shen2322">更多>></div>
+            </div>
+        </div>
+        {/loop}
+        {/pc}
+    </div>
+
+</div>
+{template "content","footer"}

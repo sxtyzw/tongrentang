@@ -1,0 +1,48 @@
+{template "content","header"}
+<script src={JS_PATH}myjs/gongsigaikuang.js></script>
+<link rel="stylesheet" href={CSS_PATH}mycss/touzizheguanxi.css>
+<div class="banner">
+    <a href=""><div class="banner1"><img src="{IMG_PATH}myimgs/banner04.jpg" alt=""></div></a>
+    {pc:content action="category" catid="0" num="6" order="listorder ASC" }
+    {loop $data $r}
+    <div class="banner2">
+        <a href="{$r[url]}"><div class="banner11">{$r[catname]}</div></a>
+        <div class="shang">
+            {pc:content action="category" catid="$r[catid]" num="6" order="listorder ASC" }
+            {loop $data $r}
+            <a href="{$r[url]}"><div>{$r[catname]}</div></a>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+</div>
+<div class="shen">
+    <div class="shen1">
+        <div class="shen11">{$CATEGORYS[$top_parentid][catname]}</div>
+        <div class="shen12">
+            {pc:content action="category" catid="$top_parentid" num="10" order="listorder ASC" }
+            {loop $data $r}
+            <div class="shen121"><a href="{$r[url]}"><div class="shen122">{$r[catname]}</div></a></div>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    <div class="shen2">
+        <div class="shen21">
+            <div class="shen211">{$CATEGORYS[$catid][catname]}</div>
+            <div class="shen212">
+                <div class="shen2121"><a href="">首页</a> &gt; </span>{catpos($catid)}</div>
+            </div>
+        </div>
+        <div class="shen22">
+            <div style="text-align: center;margin-top: 30px;font-size: 18px;">{$title}</div>
+            <div style="text-align: center;margin-bottom: 30px">发布时间：{date('Y-m-d', $inputtime)}</div>
+            {$content}
+        </div>
+
+    </div>
+
+</div>
+{template "content","footer"}

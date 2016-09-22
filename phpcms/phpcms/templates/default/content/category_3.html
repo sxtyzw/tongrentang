@@ -1,0 +1,67 @@
+{template "content","header"}
+<script src={JS_PATH}myjs/gongsigaikuang.js></script>
+<link rel="stylesheet" href={CSS_PATH}mycss/touzizheguanxi.css>
+<div class="banner">
+    <a href=""><div class="banner1"><img src="{IMG_PATH}myimgs/banner04.jpg" alt=""></div></a>
+    {pc:content action="category" catid="0" num="6" order="listorder ASC" }
+    {loop $data $r}
+    <div class="banner2">
+        <a href="{$r[url]}"><div class="banner11">{$r[catname]}</div></a>
+        <div class="shang">
+            {pc:content action="category" catid="$r[catid]" num="6" order="listorder ASC" }
+            {loop $data $r}
+            <a href="{$r[url]}"><div>{$r[catname]}</div></a>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+</div>
+<div class="shen">
+    <div class="shen1">
+        <div class="shen11">{$CATEGORYS[$catid][catname]}</div>
+        <div class="shen12">
+            {pc:content action="category" catid="$catid" num="10" order="listorder ASC" }
+            {loop $data $r}
+            <div class="shen121"><a href="{$r[url]}"><div class="shen122">{$r[catname]}</div></a></div>
+            {/loop}
+            {/pc}
+        </div>
+    </div>
+    <div class="shen2">
+        <div class="shen21">
+            <div class="shen211">{$CATEGORYS[$catid][catname]}</div>
+            <div class="shen212">
+                <div class="shen2121"><a href="">首页</a> &gt; {catpos($catid)}</div>
+            </div>
+        </div>
+        <div class="shen22">
+            <div class="shen221">同仁堂是我国中药行业的老字号，1997年6月，北京同仁堂股份有限公司隆重挂牌，在上海证交所上市。2000年3月，北京同仁堂股份有限公司下沉部分优良资产组建北京同仁堂科技发展股份有限公司，同年10月底在香港联交所创业板挂牌上市。上市之后，同仁堂科技始终保持着良好的业绩表现，并于2010年7月9日正式转入香港联交所主板上市，股票代码01666。 </div>
+        </div>
+        <div class="shen23">
+            <div class="shen231">最新公告</div>
+            <div class="shen232">
+                {pc:content action="lists"  catid="33" num="5" order="listorder ASC"   }
+                {loop $data $r}
+                <div class="shen2321">
+                    <a href="{$r[url]}"><div class="shen23211">{$r[title]}</div></a>
+                    <div class="shen23212">{date('Y-m-d', $r['inputtime'])}</div>
+                </div>
+                {/loop}
+                {/pc}
+                <div class="shen2322">更多>></div>
+            </div>
+        </div>
+        <div class="shen23">
+            <div class="shen231">股票行情</div>
+            <div class="shen232">
+                实时图 日K图
+                <br>
+                <img src="{IMG_PATH}myimgs/shen232.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+{template "content","footer"}
